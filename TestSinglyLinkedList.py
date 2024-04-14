@@ -1,11 +1,11 @@
 import unittest
 
-from ArrayList import ArrayList
+from SinglyLinkedList import SinglyLinkedList
 
 
-class TestArrayList(unittest.TestCase):
+class TestSinglyLinkedList(unittest.TestCase):
     def test_isEmpty(self):
-        list = ArrayList()
+        list = SinglyLinkedList()
         self.assertEqual(True, list.isEmpty())  # add assertion here
         list.add(1)
         self.assertEqual(False, list.isEmpty())  # add assertion here
