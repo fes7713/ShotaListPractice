@@ -1,9 +1,10 @@
 from ArrayList import ArrayList
+from List import List
 from SinglyLinkedList import SinglyLinkedList
 
 
 def test_array_list():
-    arrayList = ArrayList()
+    arrayList: List = ArrayList()
     # True
     print(arrayList.isEmpty())
 
@@ -35,7 +36,7 @@ def test_array_list():
 
 
 def test_linked_list():
-    linkedList = SinglyLinkedList()
+    linkedList: List = SinglyLinkedList()
     # True
     print(linkedList.isEmpty())
 
