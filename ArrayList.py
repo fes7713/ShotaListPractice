@@ -1,5 +1,9 @@
-class ArrayList():
+from List import List
+
+
+class ArrayList(List):
     def __int__(self):
+        super.__init__()
         self.array = []
         self.size = 0
         return
@@ -27,9 +31,15 @@ class ArrayList():
     def size(self)-> int:
         return 0
 
+    # Return array that represents the list
+    def toArray(self):
+        return []
+
     # Print inside of array
+    # Call toArray inside this function to print it
+    # No need to change it
     def print(self):
-        print("Printing...")
+        print(self.toArray())
         return
 
 
