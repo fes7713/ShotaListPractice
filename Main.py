@@ -21,7 +21,7 @@ def test_array_list():
     arrayList.print()
 
     # 6
-    print(arrayList.size())
+    #print(arrayList.size())
 
     arrayList.remove(3)
     arrayList.remove(4)

@@ -17,16 +17,18 @@ class ArrayList(List):
     def insert(self, index, data):
         # if index < 0 or index > self.size:
         #     print("Error size")
-
+        self.array.insert(index, data)
         # else:
         #     self.array.insert(index, data)
         #     self.size +=1
-        # for i in range(self.size - 1, index, -1):
-        #     self.array[i] = self.array[i - 1]
-        # self.array[index] = data
+        save_value = self.array[-1]
 
+        # 配列の後ろから2番目の要素から順に後ろの要素に値をコピー
+        for i in range(len(self.array) - 2, -1, -1):
+            self.array[i]
 
-        return self.size
+        # 一時的に保存した値を配列の先頭に挿入
+        self.array[-1] = save_value
 
     # Search for data in array and remove data
     # Make sure to shift all the gaps
