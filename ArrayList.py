@@ -41,7 +41,7 @@ class ArrayList(List):
     # Return current size
     def size(self)-> int:
 
-        return len(int(self.size))
+        return self.size
 
     # Return array that represents the list
     def toArray(self):
