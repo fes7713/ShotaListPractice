@@ -1,5 +1,4 @@
 from List import List
-from Node import Node
 
 
 class SinglyLinkedList(List):
@@ -13,15 +12,19 @@ class SinglyLinkedList(List):
     # Change the next node of the last node to the created node
     def add(self, data):
         #create new node
-        node = self.head.changeNextNode
+        node = Node(data, None)
+
+        # List is empty
         if self.head is None:
             self.head = node
+            self.size = self.size + 1
             return
+
         current_node = self.head
         while True:
-            if current_node.changeNextNode is None:
+            if current_node.getNextNode() is None:
     #intput new node
-                current_node.changeNextNode = node
+                current_node.changeNextNode(node)
                 break
             current_node = current_node.changeNextNode
 
