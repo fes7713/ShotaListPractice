@@ -39,7 +39,7 @@ class ArrayList(List):
         return len(self.array) == 0
 
     # Return current size
-    def size(self)-> int:
+    def getSize(self)-> int:
 
         return self.size
 

@@ -1,4 +1,5 @@
 from List import List
+from Node import Node
 
 
 class SinglyLinkedList(List):
@@ -26,9 +27,19 @@ class SinglyLinkedList(List):
     #intput new node
                 current_node.changeNextNode(node)
                 break
-            current_node = current_node.changeNextNode
+            current_node = current_node.getNextNode()
+        self.size = self.size + 1
 
-        return
+    def getNode(self, index):
+        if self.size <= index:
+            raise ValueError("Error: index is over the size")
+
+        node = self.head
+        for i in range(0, index):
+            node = node.getNextNode()
+
+        return node
+
     #for commit
     # Insert data to the index
     # Create new node and insert to the middle of the nodes
@@ -50,12 +61,17 @@ class SinglyLinkedList(List):
         return False
 
     # Return current size
-    def size(self)-> int:
-        return len(int(self.size))
+    def getSize(self)-> int:
+        return self.size
 
     # Return array that represents the list
     def toArray(self):
-        return self.head
+        result = []
+        node = self.head
+        while node is not None:
+            result.append(node.getData())
+            node = node.getNextNode()
+        return result
 
     # Print inside of array
     # Call toArray inside this function to print it

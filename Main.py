@@ -21,7 +21,7 @@ def test_array_list():
     arrayList.print()
 
     # 6
-    #print(arrayList.size())
+    print(arrayList.getSize())
 
     arrayList.remove(3)
     arrayList.remove(4)
@@ -52,8 +52,9 @@ def test_linked_list():
     # [1, 2, 3, 4, 5, 6]
     linkedList.print()
 
+    print(linkedList.getNode(2).getData())
     # 6
-    print(linkedList.size())
+    print(linkedList.getSize())
 
     linkedList.remove(3)
     linkedList.remove(4)

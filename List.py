@@ -12,7 +12,7 @@ class List:
     def isEmpty(self) -> bool:
         return False
 
-    def size(self) -> int:
+    def getSize(self) -> int:
         return 0
 
     def toArray(self):
