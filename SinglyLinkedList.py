@@ -8,19 +8,23 @@ class SinglyLinkedList(List):
         self.size = 0
         return
 
-    # Create new node: done
+    # Create new node: if self.head is none, create new node
     # Search for the last node
     # Change the next node of the last node to the created node
     def add(self, data):
-        #cretae new node
-        self.new_node = Node(data)
-        #if head != none: which means not empty, new_node become as head
+        #create new node
+        node = self.head.changeNextNode
         if self.head is None:
-            self.head = self.new_node
-        # Search for the last node
-        #last_node = self.head
-        # Change the next node of the last node to the created node
-       # last_node = next(self.head)
+            self.head = node
+            return
+        current_node = self.head
+        while True:
+            if current_node.changeNextNode is None:
+    #intput new node
+                current_node.changeNextNode = node
+                break
+            current_node = current_node.changeNextNode
+
         return
 
     # Insert data to the index
